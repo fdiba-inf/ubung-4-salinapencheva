@@ -8,19 +8,26 @@ public class ArrayOutput {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int[] a = new int[5];
+        int count = input.nextInt();
+        int[] a = new int[count];
         int space = 0;
 
-        System.out.println("Enter numbers: ");
-        for (int index = 0; index < a.length; index++) {
-          for (iny j = 0; j < space; j++){
+        for (int i = 0; i < a.length; i++){
+          a[i] = input.nextInt();
+        }
+
+        for (int i = 0; i < a.length; i++){
+          for (int j = 0; j < space; j++){
             System.out.print(" ");
           }
           space++;
-          System.out.println(a[i])
+          System.out.println(a[i]);
         }
 
-        String numbersAsString = Arrays.toString(numbers);
+        System.out.println("Enter numbers: ");
+  
+
+        String numbersAsString = Arrays.toString(a);
         System.out.println("Numbers: " + numbersAsString);
     }
 
